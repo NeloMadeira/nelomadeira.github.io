@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Portfólio</title>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- LOGO -->
+                <a href="" class="text-2xl font-bold text-gray-700">
+                    NELO <span class="text-blue-600">MACHEL</span>
+                </a>
+
+                <!-- MENU DESKTOP -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">INÍCIO</a>
+                    <a href="#projects" class="text-gray-600 font-medium hover:text-blue-600 transition">PROJECTOS</a>
+                    <a href="#about" class="text-gray-600 font-medium hover:text-blue-600 transition">SOBRE MIM</a>
+                    <a href="#contacts" class="text-gray-600 font-medium hover:text-blue-600 transition">CONTACTOS</a>
+
+                    <a href="doc/Nelo Madeira Machel.pdf" target="_blank"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" download>
+                        Baixar CV
+                    </a>
+                </div>
+
+                <!-- BOTÃO BURGER -->
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- MENU MOBILE -->
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 mt-4 pb-4">
+
+                <a href="#" class="text-gray-700 font-medium hover:text-blue-600 transition">INÍCIO</a>
+                <a href="#projects" class="text-gray-700 font-medium hover:text-blue-600 transition">PROJECTOS</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-blue-600 transition">SOBRE MIM</a>
+                <a href="#contacts" class="text-gray-700 font-medium hover:text-blue-600 transition">CONTACTOS</a>
+
+                <a href="doc/Nelo Madeira Machel.pdf" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-center"
+                    download>
+                    Baixar CV
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- Conteúdo principal -->
+    <main class="max-w-7xl mx-auto px-4">
+        <div class="relative overflow-hidden py-24">
+
+            <!-- CÍRCULO BACKGROUND -->
+            <div class="absolute -top-110 -right-110 w-[1100px] h-[1100px]
+         md:bg-gradient-to-br from-blue-500 to-blue-300
+         rounded-full z-0">
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 items-center gap-12">
+
+                    <!-- TEXTO -->
+                    <div>
+                        <h1 class="text-gray-500 mt-4 mb-4 text-3xl md:text-[45px] font-bold">
+                            <div class="flex">Olá <img src="img/waving-hand-emoji.png" alt="" class="h-auto w-15">,
+                            </div>
+                            sou <span class="text-blue-600">Nelo Madeira Machel</span>, <br>
+                            Desenvolvedor Web Full-Stack.
+                        </h1>
+
+                        <p class="text-gray-600 leading-relaxed font-semibold">
+                            Desenvolvo soluções digitais que simplificam vidas e impulsionam negócios.<br>
+                            Crio interfaces intuitivas no Figma e sistemas web robustos com Laravel,<br>
+                            sempre com foco em performance, escalabilidade e usabilidade.<br>
+                        </p>
+
+                        <p class="mt-4 text-blue-600 font-semibold text-xl">
+                            Transformo ideias em produtos digitais impactantes.
+                        </p>
+
+                        <div class="flex gap-4 mt-8">
+                            <a href="#contacts" class="border-2 border-blue-600 text-blue-600
+                        px-6 py-3 rounded-lg font-medium
+                        hover:bg-blue-600 hover:text-white transition">
+                                Contrate-me
+                            </a>
+
+                            <a href="{{ asset('doc/Nelo Madeira Machel.pdf') }}" class="bg-blue-600 text-white
+                        px-6 py-3 rounded-lg font-medium
+                        hover:bg-blue-700 transition shadow-md" download>
+                                Baixar CV
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- IMAGEM -->
+                    <div class="flex justify-center">
+                        <img src="img/retrato.png" class="w-full h-auto object-cover rounded-full shadow-2xl">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="py-24 bg-gray-50" id="projects">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    Os meus projectos
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card Template -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition">
+
+                        <!-- Imagem -->
+                        <div class="h-48 w-full overflow-hidden">
+                            <img src="img/credi_now_project.png" alt="Credi Now"
+                                class="rounded-md w-full h-full object-cover">
+                        </div>
+
+                        <!-- Conteúdo -->
+                        <div class="p-6 flex flex-col flex-1">
+
+                            <!-- Título -->
+                            <h3 class="text-xl font-semibold mb-2">Sistema de Gestão de Microcrédito - Credi Now</h3>
+
+                            <!-- Descrição -->
+                            <p class="text-gray-600 flex-1 mb-4 text-sm">
+                                Plataforma web desenvolvida em Laravel para gestão de clientes e pagamentos para uma
+                                pequena
+                                empresa de Microcrédito moçambicana de nome Tambirane Microcrédito.
+                            </p>
+
+                            <!-- Tecnologias -->
+                            <p class="mb-4 text-xs">
+                                Tecnologias:
+                                <span class="bg-red-200 rounded-sm px-1 py-[1px]">HTML</span>
+                                <span class="bg-yellow-200 rounded-sm px-1 py-[1px] mx-1">CSS</span>
+                                <span class="bg-purple-200 rounded-sm px-1 py-[1px]">PHP</span>
+                                <span class="bg-yellow-400 rounded-sm px-1 py-[1px] mx-1">JavaScript</span>
+                                <span class="bg-red-300 rounded-sm px-1 py-[1px]">Laravel</span>
+                                <span class="bg-blue-200 rounded-sm px-1 py-[1px] mx-1">Bootstrap</span>
+                                <span class="bg-orange-200 rounded-sm px-1 py-[1px]">MySQL</span>
+                            </p>
+
+                            <!-- Botões -->
+                            <div class="flex space-x-2 mt-auto">
+                                <a href="#" target="_blank"
+                                    class="flex-1 bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition text-sm justify-center flex items-center gap-1">
+                                    Demo <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="#" target="_blank"
+                                    class="flex-1 bg-gray-800 text-white px-3 py-1 rounded-lg hover:bg-black transition text-sm justify-center flex items-center gap-1">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition">
+                        <div class="h-48 w-full overflow-hidden">
+                            <img src="img/iscim_project.png" alt="" class="rounded-md w-full h-full object-cover">
+                        </div>
+
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Website Dinâmico - Instituto Superior de Comunicação
+                                e
+                                Imagem de
+                                Moçambique (ISCIM)</h3>
+                            <p class="text-gray-600 flex-1 mb-4 text-sm">
+                                Website dinâmico institucional com chatbot para responder questões frequentes e um
+                                portal
+                                com
+                                dashboard e gestão de conteúdos para o website e o chatbot do ISCIM.
+                            </p>
+
+                            <p class="mb-4 text-xs">Tecnologias: <span
+                                    class="bg-red-200 rounded-sm px-1 py-[1px]">HTML</span>
+                                <span class="bg-yellow-200 rounded-sm px-1 py-[1px] mx-1">CSS</span> <span
+                                    class="bg-purple-200 rounded-sm px-1 py-[1px]">PHP</span><span
+                                    class="bg-yellow-400 rounded-sm px-1 py-[1px] mx-1">JavaScript</span><span
+                                    class="bg-red-300 rounded-sm px-1 py-[1px]">Laravel</span><span
+                                    class="bg-blue-200 rounded-sm px-1 py-[1px] mx-1">Bootstrap</span><span
+                                    class="bg-orange-200 rounded-sm px-1 py-[1px]">MySQL</span>
+                            </p>
+
+                            <div class="flex space-x-2 mt-auto">
+                                <a href="#" target="_blank"
+                                    class="flex-1 bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition text-sm justify-center flex items-center gap-1">
+                                    Demo <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/NeloMadeira/ISCIM-dinamic-website" target="_blank"
+                                    class="flex-1 bg-gray-800 text-white px-3 py-1 rounded-lg hover:bg-black transition text-sm justify-center flex items-center gap-1">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition">
+                        <div class="h-48 w-full overflow-hidden">
+                            <img src="img/portfolio_project.png" alt=""
+                                class="rounded-md rounded-md w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Portfólio profissional</h3>
+                            <p class="text-gray-600 flex-1 mb-4 text-sm">
+                                Portfólio profissional desenvolvido para apresentar as minhas competências técnicas,
+                                habilidades
+                                profissionais e os projectos já desenvolvidos, incluindo aplicações web, sistemas de
+                                gestão
+                                e
+                                soluções digitais criadas ao longo da minha experiência como programador.
+                            </p>
+                            <p class="mb-4 text-xs">Tecnologias: <span
+                                    class="bg-red-200 rounded-sm px-1 py-[1px]">HTML</span>
+                                <span class="bg-yellow-200 rounded-sm px-1 py-[1px] mx-1">CSS</span> <span
+                                    class="bg-yellow-400 rounded-sm px-1 py-[1px]">JavaScript</span><span
+                                    class="bg-red-300 rounded-sm px-1 py-[1px] mx-1">Alpine.JS</span><span
+                                    class="bg-blue-200 rounded-sm px-1 py-[1px]">Tailwind</span>
+                            </p>
+                            <div class="flex space-x-2 mt-auto">
+                                <a href="#" target="_blank"
+                                    class="flex-1 bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition text-sm justify-center flex items-center gap-1">
+                                    Demo <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/NeloMadeira/nelomachel.github.io" target="_blank"
+                                    class="flex-1 bg-gray-800 text-white px-3 py-1 rounded-lg hover:bg-black transition text-sm justify-center flex items-center gap-1">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="py-24" id="about">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <h2 class="text-4xl font-bold mb-16 text-center">
+                    Sobre Mim
+                </h2>
+
+
+                <div class="bg-white rounded-2xl shadow-xl p-10">
+
+                    <!-- Grid 1 coluna no mobile, 2 colunas no md -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+                        <!-- COLUNA IMAGEM -->
+                        <div class="w-full flex justify-center">
+                            <img src="img/graduacao-better.png" alt="Foto de graduacao"
+                                class="max-w-sm md:max-w-md lg:max-w-lg w-full h-auto object-contain">
+                        </div>
+
+                        <!-- COLUNA CONTEÚDO -->
+                        <div x-data="{ tab: 'skills' }" class="w-full">
+
+
+                            <!-- TABS -->
+                            <div class="flexs mb-8 space-x-6">
+                                <button @click="tab = 'skills'" :class="tab === 'skills' ?
+                                    'border-b-2 border-blue-600 text-blue-600' :
+                                    'text-gray-500'" class="px-4 py-2 font-medium transition">
+                                    Competências
+                                </button>
+
+                                <button @click="tab = 'career'" :class="tab === 'career' ?
+                                    'border-b-2 border-blue-600 text-blue-600' :
+                                    'text-gray-500'" class="px-4 py-2 font-medium transition">
+                                    Carreira Profissional
+                                </button>
+
+                                <button @click="tab = 'education'" :class="tab === 'education' ?
+                                    'border-b-2 border-blue-600 text-blue-600' :
+                                    'text-gray-500'" class="px-4 py-2 font-medium transition">
+                                    Educação
+                                </button>
+                            </div>
+
+                            <!-- CONTEÚDO -->
+                            <div>
+
+                                <div x-show="tab === 'skills'" x-transition>
+                                    <div class="">
+
+                                        <h2 class="text-xl font-semibold my-3">
+                                            <span class="text-lg text-blue-400 font-bold">1.</span>
+                                            Linguagens de Programação
+                                        </h2>
+
+                                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
+
+                                            <div>
+                                                <img src="img/php.png" class="mx-auto w-10 md:w-12">
+                                                <p>PHP</p>
+                                            </div>
+
+                                            <div>
+                                                <img src="img/js.png" class="mx-auto w-10 md:w-12">
+                                                <p>JavaScript</p>
+                                            </div>
+
+                                            <div>
+                                                <img src="img/html.png" class="mx-auto w-10 md:w-12">
+                                                <p>HTML5</p>
+                                            </div>
+
+                                            <div>
+                                                <img src="img/css.png" class="mx-auto w-10 md:w-12">
+                                                <p>CSS</p>
+                                            </div>
+
+                                            <div>
+                                                <img src="img/mysql.png" class="mx-auto w-12 md:w-16">
+                                                <p>MySQL</p>
+                                            </div>
+
+                                        </div>
+
+                                        <h2 class="text-xl font-semibold mb-3 mt-6"><span
+                                                class="text-lg text-blue-400 font-bold">2.</span>
+                                            Frameworks &
+                                            Bibliotecas</h2>
+
+                                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
+                                            <div>
+                                                <img src="img/laravel.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Laravel</p>
+                                            </div>
+                                            <div>
+                                                <img src="img/tailwind.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Tailwind</p>
+                                            </div>
+                                            <div>
+                                                <img src="img/bootstrap.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Bootstrap</p>
+                                            </div>
+                                            <div>
+                                                <img src="img/alpinejs.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Alpine.JS</p>
+                                            </div>
+                                            <div>
+                                                <img src="img/vite.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Vite</p>
+                                            </div>
+                                        </div>
+
+                                        <h2 class="text-xl font-semibold mb-3 mt-6"><span
+                                                class="text-lg text-blue-400 font-bold">3.</span>
+                                            Ferramentas e
+                                            Tecnologias</h2>
+
+                                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
+                                            <div>
+                                                <img src="img/git.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Git</p>
+                                            </div>
+                                            <div>
+                                                <img src="img/GitHub.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>GitHub</p>
+                                            </div>
+                                            <div>
+                                                <img src="img/figma.png" alt="" class="mx-auto w-12 md:w-16">
+                                                <p>Figma</p>
+                                            </div>
+                                        </div>
+
+                                        <h2 class="text-xl font-semibold mb-3 mt-6"><span
+                                                class="text-lg text-blue-400 font-bold">4.</span>
+                                            Soft Skills
+                                        </h2>
+
+                                        <div class="">
+                                            <ul>
+                                                <li><i
+                                                        class="fa-regular fa-circle-check mx-1 text-blue-400"></i>Comunicação
+                                                    profissional;</li>
+                                                <li><i
+                                                        class="fa-regular fa-circle-check mx-1 text-blue-400"></i>Resolução
+                                                    de
+                                                    problemas;</li>
+                                                <li><i
+                                                        class="fa-regular fa-circle-check mx-1 text-blue-400"></i>Pensamento
+                                                    analítico;</li>
+                                                <li><i
+                                                        class="fa-regular fa-circle-check mx-1 text-blue-400"></i>Capacidade
+                                                    de
+                                                    aprendizagem rápida;</li>
+                                                <li><i
+                                                        class="fa-regular fa-circle-check mx-1 text-blue-400"></i>Trabalho
+                                                    em
+                                                    equipe;</li>
+                                                <li><i
+                                                        class="fa-regular fa-circle-check mx-1 text-blue-400"></i>Organização
+                                                    e
+                                                    gestão de tarefas.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div x-show="tab === 'career'" x-transition>
+                                    <div class="relative border-l-4 border-blue-600 pl-8 space-y-12">
+                                        <!-- Estagio Projenity -->
+                                        <div class="relative">
+                                            <div
+                                                class="absolute -left-5 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white">
+                                            </div>
+                                            <h3 class="text-lg font-semibold">Projenity Moçambique</h3>
+                                            <p class="text-sm text-gray-500">Jan, 2024 - Fev, 2025</p>
+                                            <p class="mt-2 mb-3 text-gray-700 text-xl">
+                                                Estágio em Desenvolvimento Web Full-Stack
+                                            </p>
+                                            <ul class="space-y-4 text-gray-700">
+
+                                                <li class="flex items-start gap-3">
+                                                    <i class="fa-regular fa-circle-check text-blue-500 mt-1"></i>
+                                                    <span>
+                                                        Desenvolvimento do website da N'txuva Software, incluindo a
+                                                        implementação
+                                                        de um sistema de venda de módulos com integração ao PayPal.
+                                                    </span>
+                                                </li>
+
+                                                <li class="flex items-start gap-3">
+                                                    <i class="fa-regular fa-circle-check text-blue-500 mt-1"></i>
+                                                    <span>
+                                                        Criação de um sistema de gestão de conteúdo dinâmico para
+                                                        administrar
+                                                        as informações do website.
+                                                    </span>
+                                                </li>
+
+                                                <li class="flex items-start gap-3">
+                                                    <i class="fa-regular fa-circle-check text-blue-500 mt-1"></i>
+                                                    <span>
+                                                        Desenvolvimento de um portal de clientes para acompanhamento de
+                                                        assinaturas, acesso a vídeos de treinamento e actualizações do
+                                                        software.
+                                                    </span>
+                                                </li>
+
+                                                <li class="flex items-start gap-3">
+                                                    <i class="fa-regular fa-circle-check text-blue-500 mt-1"></i>
+                                                    <span>
+                                                        Responsável pelo deploy e manutenção dos sistemas e websites da
+                                                        N'txuva
+                                                        Software.
+                                                    </span>
+                                                </li>
+
+                                                <li class="flex items-start gap-3">
+                                                    <i class="fa-regular fa-circle-check text-blue-500 mt-1"></i>
+                                                    <span>
+                                                        Remodelação completa do website, implementando um novo template
+                                                        para proporcionar uma experiência mais moderna e intuitiva.
+                                                    </span>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div x-show="tab === 'education'" x-transition>
+                                    <div class="relative border-l-4 border-blue-600 pl-8 space-y-12">
+
+                                        <!-- Ensino Primário -->
+                                        <div class="relative">
+                                            <div
+                                                class="absolute -left-5 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white">
+                                            </div>
+                                            <h3 class="text-lg font-semibold">Ensino Primário</h3>
+                                            <p class="text-sm text-gray-500">2008 - 2014</p>
+                                            <p class="mt-2 text-gray-700 text-xl text-semibold">
+                                                Escola Primária Completa Estrela do Oriente
+                                            </p>
+                                        </div>
+
+                                        <!-- Ensino Secundário -->
+                                        <div class="relative">
+                                            <div
+                                                class="absolute -left-5 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white">
+                                            </div>
+                                            <h3 class="text-lg font-semibold">Ensino Secundário</h3>
+                                            <p class="text-sm text-gray-500">2015 - 2019</p>
+                                            <p class="mt-2 text-gray-700 text-xl text-semibold">
+                                                Escola Secundária Eduardo Mondlane
+                                            </p>
+                                            <p class="text-gray-700">
+                                                Área de Ciências com Desenho.
+                                            </p>
+                                        </div>
+
+                                        <!-- Ensino Superior -->
+                                        <div class="relative">
+                                            <div
+                                                class="absolute -left-5 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white">
+                                            </div>
+                                            <h3 class="text-lg font-semibold">Ensino Superior</h3>
+                                            <p class="text-sm text-gray-500">2020 - 2025</p>
+                                            <p class="mt-2 text-gray-700 text-xl text-semibold">
+                                                Instituto Superior de Comunicação e Imagem de Moçambique (ISCIM)<br>
+                                            </p>
+                                            <p class="text-gray-700">
+                                                Licenciatura em Informática de Sistemas.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="py-24 bg-gray-50" id="contacts">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    Contactos
+                </h2>
+
+                <div class="bg-white rounded-2xl shadow-xl p-12 border border-blue-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="">
+                            <h2 class="text-2xl md:text-3xl font-bold mb-6" id="about">Entre em contacto comigo!</h2>
+                            <p class=" font-semibold"><i class="fa-solid fa-phone"></i>: (+258) 86 400 8955</p>
+                            <p class=" font-semibold"><i class="fa-solid fa-phone"></i>: (+258) 84 848 9186</p>
+                            <p class=" font-semibold"><i class="fa-solid fa-envelope"></i>: nelomachel179@gmail.com</p>
+
+                            <div class="flex space-x-4 mt-4 md:mt-8 mb-8 md:mb-0">
+                                <a href="http://linkedin.com/in/nelo-machel" target="_blank"
+                                    class="bg-blue-400 text-white px-2 py-1 rounded-lg hover:bg-blue-500 transition text-[20px]"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a href="http://github.com/NeloMadeira" target="_blank" class="bg-blue-400 text-white px-2 py-1 rounded-lg hover:bg-black
+                                    transition text-[20px]"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://wa.me/258820882106" target="_blank"
+                                    class="bg-blue-400 text-white px-2 py-1 rounded-lg hover:bg-green-700 transition text-[20px]"><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <form action="#" method="POST">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                                    <div>
+                                        <input type="text" name="email" id="email"
+                                            placeholder="Insira o seu endereco email"
+                                            class="p-2 rounded-lg bg-[#dbdbdb] w-full" required>
+                                    </div>
+
+                                    <div>
+                                        <input type="text" name="subject" id="subject" placeholder="Insira o assunto"
+                                            class="p-2 rounded-lg bg-[#dbdbdb] w-full" required>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <textarea name="body" id="body" rows="6" placeholder="Componha um email"
+                                            class="p-2 rounded-lg bg-[#dbdbdb] w-full resize-none" required></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="submit"
+                                        class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition text-sm flex items-center gap-2">
+                                        Submeter <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-inner mt-10">
+        <div class="max-w-7xl mx-auto px-4 py-6 text-center text-gray-500 text-sm">
+            © 2026 Nelo Machel. Todos os direitos reservados.
+        </div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script>
+            const btn = document.getElementById('menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </footer>
+</body>
+
+</html>
